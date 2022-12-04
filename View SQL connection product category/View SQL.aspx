@@ -11,11 +11,12 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="lbl1" runat="server" Text="CategoryName"></asp:Label>
-            <asp:TextBox ID="txbox1" runat="server" OnTextChanged="txbox1_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="txbox1" runat="server"></asp:TextBox>
         </div>
         <div>
             <asp:GridView ID="GridView1" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager"
-                HeaderStyle-CssClass="header" RowStyle-CssClass="rows"></asp:GridView>
+                HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" PageSize="4">
+            </asp:GridView>
         </div>
         <div>
             <asp:Label ID="lbl2" runat="server" Text=""></asp:Label>
